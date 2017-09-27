@@ -10,9 +10,15 @@ import UIKit
 
 class PartyMembersVC: UIViewController {
 
+    var players = [Int: Player]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let playersBase = Player.players {
+            for player in playersBase {
+                self.players[player.number] = player
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +26,8 @@ class PartyMembersVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
     
 
     /*
