@@ -8,20 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		CC0DDE471F7BD3B700D9C4C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE461F7BD3B700D9C4C6 /* AppDelegate.swift */; };
-		CC0DDE491F7BD3B700D9C4C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE481F7BD3B700D9C4C6 /* ViewController.swift */; };
+		CC0DDE491F7BD3B700D9C4C6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE481F7BD3B700D9C4C6 /* MainVC.swift */; };
 		CC0DDE4C1F7BD3B700D9C4C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0DDE4A1F7BD3B700D9C4C6 /* Main.storyboard */; };
 		CC0DDE4E1F7BD3B700D9C4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0DDE4D1F7BD3B700D9C4C6 /* Assets.xcassets */; };
 		CC0DDE511F7BD3B700D9C4C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0DDE4F1F7BD3B700D9C4C6 /* LaunchScreen.storyboard */; };
+		CC0DDE5B1F7BEF7400D9C4C6 /* BarcPlayers.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0DDE5A1F7BEF6F00D9C4C6 /* BarcPlayers.plist */; };
+		CC0DDE601F7BEFD900D9C4C6 /* PartyMembersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE5F1F7BEFD900D9C4C6 /* PartyMembersVC.swift */; };
+		CC0DDE621F7BEFE800D9C4C6 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE611F7BEFE800D9C4C6 /* PlayerVC.swift */; };
+		CC0DDE641F7BF00800D9C4C6 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE631F7BF00800D9C4C6 /* BorderedButton.swift */; };
+		CC0DDE661F7BF01700D9C4C6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE651F7BF01700D9C4C6 /* Player.swift */; };
+		CC0DDE671F7BF1B600D9C4C6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0DDE521F7BD3B700D9C4C6 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC0DDE431F7BD3B700D9C4C6 /* IWantToJoinInBarcelona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IWantToJoinInBarcelona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0DDE461F7BD3B700D9C4C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC0DDE481F7BD3B700D9C4C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC0DDE481F7BD3B700D9C4C6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CC0DDE4B1F7BD3B700D9C4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC0DDE4D1F7BD3B700D9C4C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC0DDE501F7BD3B700D9C4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC0DDE521F7BD3B700D9C4C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0DDE5A1F7BEF6F00D9C4C6 /* BarcPlayers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BarcPlayers.plist; sourceTree = "<group>"; };
+		CC0DDE5F1F7BEFD900D9C4C6 /* PartyMembersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyMembersVC.swift; sourceTree = "<group>"; };
+		CC0DDE611F7BEFE800D9C4C6 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
+		CC0DDE631F7BF00800D9C4C6 /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		CC0DDE651F7BF01700D9C4C6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +65,43 @@
 		CC0DDE451F7BD3B700D9C4C6 /* IWantToJoinInBarcelona */ = {
 			isa = PBXGroup;
 			children = (
+				CC0DDE5E1F7BEF9100D9C4C6 /* Controller */,
+				CC0DDE5D1F7BEF8D00D9C4C6 /* View */,
+				CC0DDE5C1F7BEF8400D9C4C6 /* Model */,
 				CC0DDE461F7BD3B700D9C4C6 /* AppDelegate.swift */,
-				CC0DDE481F7BD3B700D9C4C6 /* ViewController.swift */,
+				CC0DDE5A1F7BEF6F00D9C4C6 /* BarcPlayers.plist */,
 				CC0DDE4A1F7BD3B700D9C4C6 /* Main.storyboard */,
 				CC0DDE4D1F7BD3B700D9C4C6 /* Assets.xcassets */,
 				CC0DDE4F1F7BD3B700D9C4C6 /* LaunchScreen.storyboard */,
 				CC0DDE521F7BD3B700D9C4C6 /* Info.plist */,
 			);
 			path = IWantToJoinInBarcelona;
+			sourceTree = "<group>";
+		};
+		CC0DDE5C1F7BEF8400D9C4C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC0DDE651F7BF01700D9C4C6 /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC0DDE5D1F7BEF8D00D9C4C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC0DDE631F7BF00800D9C4C6 /* BorderedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC0DDE5E1F7BEF9100D9C4C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC0DDE481F7BD3B700D9C4C6 /* MainVC.swift */,
+				CC0DDE5F1F7BEFD900D9C4C6 /* PartyMembersVC.swift */,
+				CC0DDE611F7BEFE800D9C4C6 /* PlayerVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +166,8 @@
 				CC0DDE511F7BD3B700D9C4C6 /* LaunchScreen.storyboard in Resources */,
 				CC0DDE4E1F7BD3B700D9C4C6 /* Assets.xcassets in Resources */,
 				CC0DDE4C1F7BD3B700D9C4C6 /* Main.storyboard in Resources */,
+				CC0DDE671F7BF1B600D9C4C6 /* Info.plist in Resources */,
+				CC0DDE5B1F7BEF7400D9C4C6 /* BarcPlayers.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0DDE491F7BD3B700D9C4C6 /* ViewController.swift in Sources */,
+				CC0DDE641F7BF00800D9C4C6 /* BorderedButton.swift in Sources */,
+				CC0DDE601F7BEFD900D9C4C6 /* PartyMembersVC.swift in Sources */,
+				CC0DDE491F7BD3B700D9C4C6 /* MainVC.swift in Sources */,
 				CC0DDE471F7BD3B700D9C4C6 /* AppDelegate.swift in Sources */,
+				CC0DDE661F7BF01700D9C4C6 /* Player.swift in Sources */,
+				CC0DDE621F7BEFE800D9C4C6 /* PlayerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
