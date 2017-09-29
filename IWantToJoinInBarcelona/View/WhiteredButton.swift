@@ -1,20 +1,19 @@
 //
-//  BorderedButton.swift
+//  WhiteredButton.swift
 //  IWantToJoinInBarcelona
 //
-//  Created by Вячеслав Горлов on 27.09.17.
+//  Created by Вячеслав Горлов on 29.09.17.
 //  Copyright © 2017 Gorloff Foundation. All rights reserved.
 //
 
 import UIKit
 
-class BorderedButton: UIButton {
-
+class WhiteredButton: UIButton {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.borderWidth = 2.0
-        self.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-
+        self.imageView?.image = (self.imageView?.image?.withRenderingMode(.alwaysTemplate))!
+        self.imageView?.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
     }
 

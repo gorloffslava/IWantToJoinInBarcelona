@@ -18,6 +18,7 @@
 		CC0DDE641F7BF00800D9C4C6 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE631F7BF00800D9C4C6 /* BorderedButton.swift */; };
 		CC0DDE661F7BF01700D9C4C6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0DDE651F7BF01700D9C4C6 /* Player.swift */; };
 		CC0DDE671F7BF1B600D9C4C6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0DDE521F7BD3B700D9C4C6 /* Info.plist */; };
+		CC53D5191F7E8A69001F15B5 /* WhiteredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC53D5181F7E8A69001F15B5 /* WhiteredButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CC0DDE611F7BEFE800D9C4C6 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		CC0DDE631F7BF00800D9C4C6 /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		CC0DDE651F7BF01700D9C4C6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CC53D5181F7E8A69001F15B5 /* WhiteredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteredButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				CC0DDE631F7BF00800D9C4C6 /* BorderedButton.swift */,
+				CC53D5181F7E8A69001F15B5 /* WhiteredButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC53D5191F7E8A69001F15B5 /* WhiteredButton.swift in Sources */,
 				CC0DDE641F7BF00800D9C4C6 /* BorderedButton.swift in Sources */,
 				CC0DDE601F7BEFD900D9C4C6 /* PartyMembersVC.swift in Sources */,
 				CC0DDE491F7BD3B700D9C4C6 /* MainVC.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PartyMembersVC: UIViewController {
+class PartyMembersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var players = [Int: Player]()
     
@@ -27,7 +27,25 @@ class PartyMembersVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: - Table
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.players.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell") {
+            let player = Array(self.players.values).sorted{$0.number < $1.number}[indexPath.row]
+            cell.imageView?.image = UIImage(named: String(player.number))
+            cell.textLabel?.text = "\(player.number): \(player.name)"
+            cell.detailTextLabel?.text = player.role
+            return cell
+        }
+        return UITableViewCell()
+    }
     
 
     /*
