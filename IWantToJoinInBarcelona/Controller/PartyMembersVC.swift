@@ -38,7 +38,7 @@ class PartyMembersVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell") {
-            let player = Array(self.players.values).sorted{$0.number < $1.number}[indexPath.row]
+            let player = self.getPlayerFromDictionary(byAbsoluteNumber: indexPath.row)
             cell.imageView?.image = UIImage(named: String(player.number))
             cell.textLabel?.text = "\(player.number): \(player.name)"
             cell.detailTextLabel?.text = player.role
@@ -47,6 +47,24 @@ class PartyMembersVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         return UITableViewCell()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let playerController = segue.destination as? PlayerVC {
+            playerController.player = sender as! Player
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ShowPlayer", sender: self.getPlayerFromDictionary(byAbsoluteNumber: indexPath.row))
+    }
+    
+    @IBAction func unwindToPartyMembersVC(segue: UIStoryboardSegue)  {
+        
+    }
+    
+    // MARK: - Stuff
+    func getPlayerFromDictionary(byAbsoluteNumber number: Int) -> Player {
+        return Array(self.players.values).sorted{$0.number < $1.number}[number]
+    }
 
     /*
     // MARK: - Navigation

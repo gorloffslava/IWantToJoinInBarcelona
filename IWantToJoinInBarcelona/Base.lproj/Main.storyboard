@@ -14,6 +14,9 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Medium</string>
         </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
     </customFonts>
     <scenes>
         <!--MainVC-->
@@ -143,11 +146,91 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5yO-WN-ZSc"/>
                     </view>
+                    <connections>
+                        <segue destination="pTL-Tr-J8h" kind="show" identifier="ShowPlayer" id="amY-M8-mGC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oop-gu-gHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pFT-15-CV1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="342" y="133"/>
+        </scene>
+        <!--PlayerVC-->
+        <scene sceneID="7bf-wt-D4g">
+            <objects>
+                <viewController id="pTL-Tr-J8h" customClass="PlayerVC" customModule="IWantToJoinInBarcelona" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sf6-B1-Iyc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barc" translatesAutoresizingMaskIntoConstraints="NO" id="vyl-dr-ApR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9o-DX-kwN" customClass="WhiteredButton" customModule="IWantToJoinInBarcelona" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="32" height="32"/>
+                                <state key="normal" image="returnArrow"/>
+                                <connections>
+                                    <segue destination="hSS-LJ-rs5" kind="unwind" unwindAction="unwindToPartyMembersVCWithSegue:" id="kB1-x7-ojq"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YZf-H8-AGp">
+                                <rect key="frame" x="97" y="50" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="MNt-B5-XbI"/>
+                                    <constraint firstAttribute="height" constant="180" id="OBU-Ef-3x0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdv-Gt-4Es">
+                                <rect key="frame" x="20" y="250" width="58" height="62"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="52"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neymar" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0n-Re-tCc">
+                                <rect key="frame" x="169" y="250" width="186" height="62"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="52"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTg-kz-hKt">
+                                <rect key="frame" x="20" y="322" width="335" height="62"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="52"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vyl-dr-ApR" firstAttribute="bottom" secondItem="IsW-mf-FWC" secondAttribute="bottom" id="5QF-ml-egV"/>
+                            <constraint firstItem="vyl-dr-ApR" firstAttribute="leading" secondItem="IsW-mf-FWC" secondAttribute="leading" id="6S1-w1-QNp"/>
+                            <constraint firstItem="IsW-mf-FWC" firstAttribute="trailing" secondItem="RTg-kz-hKt" secondAttribute="trailing" constant="20" id="885-8D-sFP"/>
+                            <constraint firstItem="YZf-H8-AGp" firstAttribute="centerX" secondItem="sf6-B1-Iyc" secondAttribute="centerX" id="AVT-pN-xC9"/>
+                            <constraint firstItem="s0n-Re-tCc" firstAttribute="height" secondItem="Vdv-Gt-4Es" secondAttribute="height" id="Dg9-DM-Fm5"/>
+                            <constraint firstItem="s0n-Re-tCc" firstAttribute="trailing" secondItem="RTg-kz-hKt" secondAttribute="trailing" id="LI8-AJ-y6q"/>
+                            <constraint firstItem="RTg-kz-hKt" firstAttribute="leading" secondItem="IsW-mf-FWC" secondAttribute="leading" constant="20" id="LT2-Yn-m7a"/>
+                            <constraint firstItem="vyl-dr-ApR" firstAttribute="trailing" secondItem="IsW-mf-FWC" secondAttribute="trailing" id="QWX-lM-fcT"/>
+                            <constraint firstItem="E9o-DX-kwN" firstAttribute="leading" secondItem="sf6-B1-Iyc" secondAttribute="leadingMargin" id="bYi-Jo-2F4"/>
+                            <constraint firstItem="vyl-dr-ApR" firstAttribute="top" secondItem="sf6-B1-Iyc" secondAttribute="top" id="cD8-k6-q7Z"/>
+                            <constraint firstItem="YZf-H8-AGp" firstAttribute="top" secondItem="IsW-mf-FWC" secondAttribute="top" constant="30" id="cYO-Wa-MNa"/>
+                            <constraint firstItem="Vdv-Gt-4Es" firstAttribute="leading" secondItem="RTg-kz-hKt" secondAttribute="leading" id="fMT-N1-9sn"/>
+                            <constraint firstItem="E9o-DX-kwN" firstAttribute="top" secondItem="IsW-mf-FWC" secondAttribute="top" id="l7O-qx-kNB"/>
+                            <constraint firstItem="s0n-Re-tCc" firstAttribute="top" secondItem="YZf-H8-AGp" secondAttribute="bottom" constant="20" id="lSz-ML-U44"/>
+                            <constraint firstItem="RTg-kz-hKt" firstAttribute="top" secondItem="s0n-Re-tCc" secondAttribute="bottom" constant="10" id="zMy-Xg-zh1"/>
+                            <constraint firstItem="RTg-kz-hKt" firstAttribute="top" secondItem="Vdv-Gt-4Es" secondAttribute="bottom" constant="10" id="zPW-7C-VyD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IsW-mf-FWC"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="s0n-Re-tCc" id="FBr-9F-V7a"/>
+                        <outlet property="numberLabel" destination="Vdv-Gt-4Es" id="501-Q9-60V"/>
+                        <outlet property="photoImageView" destination="YZf-H8-AGp" id="tIv-Op-yAS"/>
+                        <outlet property="roleLabel" destination="RTg-kz-hKt" id="4jx-Pd-mAn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNi-E1-7Zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hSS-LJ-rs5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="133"/>
         </scene>
     </scenes>
     <resources>
